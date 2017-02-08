@@ -1,9 +1,6 @@
-# README
+# rails5-AC-AngularJS
+a simple rails 5 real time action cable application using angularJS as a front end framework to handle it
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
 
 * Ruby version
 
