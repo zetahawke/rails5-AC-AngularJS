@@ -1,0 +1,12 @@
+<h1>all chatrooms avalibles</h1>
+<br>
+<div style="border-color: green; border-radius: 30%;">
+  <% @rooms.each do |r| %>
+    <p><%= link_to r.topic, room_path(r)%></p>
+  <%end%>
+</div>
+
+<%= form_for @room, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :topic %>
+  <%= f.submit "Create a new Chatroom" %>
+<% end %>

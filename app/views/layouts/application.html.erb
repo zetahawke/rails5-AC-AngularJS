@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RtExample</title>
+    <%= action_cable_meta_tag %>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">RealTimeRails5</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <% if current_user.nil?%>
+            <li><%= link_to 'login', new_user_session_path%></li>
+            <li><%= link_to 'register', new_user_registration_path%></li>
+          <%else%>
+            <li> welcome <%= current_user.username%></li>
+          <%end%>
+        </ul>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
