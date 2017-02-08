@@ -1,3 +1,5 @@
 asset 'angular'
 asset 'bootstrap-sass-official'
+asset 'angular-actioncable'
+asset 'ngWebSocket'
 # vim: ft=ruby

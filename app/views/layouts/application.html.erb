@@ -7,9 +7,10 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://rawgit.com/angular-actioncable/angular-actioncable/1.1.1/dist/angular-actioncable.js"></script>
   </head>
 
-  <body>
+  <body ng-app="real-time">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -23,6 +24,15 @@
             <li> welcome <%= current_user.username%></li>
           <%end%>
         </ul>
+        <div class="pull-right">
+          <div ng-controller="StatusController">
+            <h4>
+              <span ng-show="status.connected">✓ Connected</span>
+              <span ng-show="status.disconnected">✘ Disconnected</span>
+              <span ng-show="status.connecting">✘ Connecting......</span>
+            </h4>
+          </div>
+        </div>
       </div>
     </nav>
     <%= yield %>

@@ -13,9 +13,16 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
-//= require_tree ./channels
+
+//= require angular/angular
+//= require angular-websocket/dist/angular-websocket.min
+//= require angular-actioncable/dist/angular-actioncable
+
+//= require app/app
+//= require_tree ./app/config
+//= require_tree ./app/controllers
+//= require_tree ./app/models
+//= require_tree ./app/services
 
 window.paceOptions = {
   document: true,

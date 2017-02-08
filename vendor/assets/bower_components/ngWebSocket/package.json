@@ -1,0 +1,23 @@
+{
+  "name": "angular-rws",
+  "version": "1.0.0",
+  "description": "A small decorator for the JavaScript WebSocket API that automatically reconnects",
+  "main": "angular-rws.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajsb85/angular-rws.git"
+  },
+  "keywords": [
+    "angular",
+    "websocket"
+  ],
+  "author": "Alexander Salas Bastidas <a.salas@ieee.org> (http://ajsb85.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajsb85/angular-rws/issues"
+  },
+  "homepage": "https://github.com/ajsb85/angular-rws#readme"
+}

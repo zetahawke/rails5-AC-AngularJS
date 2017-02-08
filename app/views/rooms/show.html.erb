@@ -1,15 +1,10 @@
-<div class="row col-md-8 col-md-offset-2">
+<div class="row col-md-8 col-md-offset-2" ng-controller="RoomsController" ng-init="roomMessages(<%= @room.id %>)">
   <h1>welcome to <%= @room.user.username%>'s chatroom</h1>
 
 <div class="panel panel-default">
-  <% if @room.messages.any? %>
-    <div class="panel-body" id="messages">
-      <%= render partial: 'messages/message', collection: @room.messages%>
-    </div>
-  <%else%>
-    <div class="panel-body hidden" id="messages">
-    </div>
-  <%end%>
+  <div class="row" ng-repeat="message in myData">
+    <p> {{ message.content }} </p>
+  </div>
 </div>
 <br>
 <%= render partial: 'messages/message_form', locals: {message: @message, room: @room}%>
